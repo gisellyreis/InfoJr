@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Podkova', serif;
+}
+
+body {
+    background-color: #E5CF94;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        'header header header'
+        'aside main main'
+    ;    
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 0;
+    margin-bottom: 32px;
+    margin-left: 32px;
+}
+
+header h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 90px;
+    color: #311B02;
+}
+
+aside {
+    grid-area: aside;
+}
+
+.aside {
+    background-color: #EDEDED;
+    width: 90%;
+    height: 160px;
+    padding: 20px 30px;
+}
+
+aside ul {
+    margin-top: 18px;
+}
+
+aside ul li {
+    margin-top: 4px;
+}
+
+main {
+    grid-area: main;
+}
+
+.main {
+    background-color: #EDEDED;
+    padding: 20px 30px;
+}
+
+main h2, p {
+    margin-bottom: 16px;
+}
+
+.aside, .main {
+    border-radius: 4px;
+}
+
+.cadastro {
+    display: flex;
+}
+
+input {
+    display: block;
+    background-color: rgba(207, 207, 207, 0.473);
+    border: 0;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 100px;
+    padding-left: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #E5CF94;
+    color: #311B02;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-color: rgba(49, 27, 2, 0.7);
+    border-radius: 4px;
+    border-width: bold;
+    cursor: pointer;
+}
+
+h2 {
+    color: #311B02;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            'header header header'
+            'aside aside aside'
+            'main main main'
+        ;
+        margin: 0;
+    }
+
+    header {
+        display: inline;
+        margin-left: 25%;
+    }
+
+    header h1 {
+        margin: 24px 0 0 24px;
+        text-align: justify;
+    }
+
+    .aside, .main {
+        width: 90%;
+        margin-bottom: 24px;
+    }
+
+}
